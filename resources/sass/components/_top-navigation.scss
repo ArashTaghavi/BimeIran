@@ -1,0 +1,269 @@
+.navbar-wrapper {
+  background-color: rgba(202,202,202,0.85);
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+  @include transition(all 0.4s);
+  &.active {
+      background-color: rgba(202,202,202,1);
+      box-shadow: 0 2px 4px rgba(0,0,0,.5);
+      .mj-nav {
+          #collapsibleNavbar {
+              ul {
+                  li {
+                      padding: 10px 0;
+                  }
+              }
+          }
+      }
+  }
+  .mj-nav {
+    padding: 0 !important;
+    .navbar-toggler {
+        font-size: 20px !important;
+    }
+    .navbar-brand {
+        margin-left: 60px;
+        margin-right: 0;
+    }
+    #collapsibleNavbar {
+        ul {
+          padding: 0;
+          li {
+            padding: 20px 0;
+            position: initial;
+            @include transition(all 0.4s);
+            &:not(:last-child) {
+              margin-left: 15px;
+            }
+            &.mobile-brand {
+              display: none;
+            }
+            a {
+              color: #333;
+              font-size: 14px;
+              &.dropdown-toggle {
+                margin-left: 10px;
+                position: relative;
+                &::after {
+                  border: none;
+                  content: "\f107";
+                  font-family: FontAwesome;
+                  font-size: 13px;
+                  left: -10px;
+                  position: absolute;
+                  top: 5px;
+                }
+              }
+            }
+            .dropdown-menu {
+              background-color: #212121;
+              border: none;
+              border-radius: 5px;
+              left: initial;
+              margin-top: 0;
+              padding: 10px 15px;
+              right: 120px;
+              top: 100%;
+              text-align: right;
+              width: 82.5%;
+              @include animation(offsetT10 0.2s);
+              &.hide {
+                @include animation(offsetB100 0.5s);
+              }
+              a {
+                color: #fff;
+                display: block;
+                font-size: 13px;
+                opacity: 0.8;
+                padding: 5px 0;
+                &:hover {
+                  opacity: 1;
+                  padding-right: 5px;
+                }
+              }
+            }
+            &.pages-link {
+              position: relative;
+              .dropdown-menu {
+                right: 0;
+                top: 100%;
+                width: 160px;
+              }
+            }
+          }
+        }
+    }
+  }
+}
+
+.dashboard-dropdown {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 20px 0;
+    position: relative;
+    @include transition(all 0.4s);
+    & > a {
+        color: #333;
+        font-size: 14px;
+        &::after {
+          border: none;
+          content: "\f107";
+          font-family: FontAwesome;
+          font-size: 13px;
+          right: -15px;
+          position: absolute;
+        }
+    }
+    .dropdown-menu {
+      background-color: #212121;
+      border: none;
+      border-radius: 5px;
+      left: initial;
+      margin-top: 0;
+      padding: 10px 15px;
+      left: 0;
+      top: 100%;
+      text-align: left;
+      width: 160px;
+      @include animation(offsetT10 0.2s);
+      &.hide {
+        @include animation(offsetB100 0.5s);
+      }
+      a {
+        color: #fff;
+        display: block;
+        font-size: 13px;
+        opacity: 0.8;
+        padding: 5px 0;
+        &:hover {
+          opacity: 1;
+          padding-left: 5px;
+        }
+        i {
+            font-size: 16px;
+        }
+      }
+      hr {
+          background-color: rgba(255,255,255,0.2);
+      }
+    }
+}
+
+.login-modal {
+  background-color: rgba(0,0,0,0.7);
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  @include animation(mjOpac 0.4s);
+  .fa-close {
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    opacity: 0.7;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    &:hover {
+        opacity: 1;
+    }
+  }
+  .login-box {
+    background-color: $mainColor;
+    border-radius: 5px;
+    color: #fff;
+    overflow: hidden;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 800px;
+    @include mjTransform(translate(50%,-50%));
+    img {
+      float: right;
+      max-width: 330px;
+    }
+    .login-form {
+      padding: 35px;
+      margin-right: 330px;
+      h4 {
+        font-size: 20px;
+        left: 10px;
+        position: relative;
+      }
+      .row > div {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      label {
+        font-size: 14px;
+      }
+      input {
+        background-color: transparent;
+        border: 1px solid #f29c9a;
+        color: #fff;
+        font-size: 13px;
+        height: 38px;
+        margin-bottom: 10px;
+        padding-right: 10px;
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+      }
+      input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: #fff;
+          opacity: 1; /* Firefox */
+      }
+      input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+          color: #fff;
+      }
+      input::-ms-input-placeholder { /* Microsoft Edge */
+          color: #fff;
+      }
+      textarea {
+        background-color: transparent;
+        border: 1px solid #f29c9a;
+        color: #fff;
+        font-size: 13px;
+        height: 85px;
+        padding: 10px;
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        background-color: #212121;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        outline: none;
+        padding: 5px 15px;
+      }
+    }
+  }
+}
+
+.sooroosh-overlay {
+    background-color: $mainColor;
+    height: 100%;
+    padding-top: 300px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    img {
+        @include animation(shake 0.5s);
+        animation-iteration-count: infinite;
+    }
+}

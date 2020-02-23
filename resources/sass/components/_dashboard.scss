@@ -1,0 +1,56 @@
+.dashboard-tab {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    @include transition(all 0.4s);
+    i {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    &.active {
+        color: $mainColor;
+    }
+}
+
+.dashboard-tab-content {
+    display: none;
+    min-height: 300px;
+    @include animation(mjOpac 0.4s);
+    &.active {
+        display: block;
+    }
+}
+
+.user-wallet {
+    color: #888;
+    font-size: 12px;
+}
+
+.dashboard-info-box {
+    margin: 0 auto;
+    width: 700px;
+    .form-control {
+        font-size: 14px;
+        padding: 10px;
+        @include transition(all 0.4s);
+        &:focus {
+            border: 1px solid $mainColor;
+            box-shadow: none;
+        }
+    }
+}
+
+.dashboard-info-box-450 {
+    margin: 0 auto;
+    width: 450px;
+    .form-control {
+        font-size: 14px;
+        padding: 10px;
+        @include transition(all 0.4s);
+        &:focus {
+            border: 1px solid $mainColor;
+            box-shadow: none;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.mj-date {
+  position: relative;
+  .mj-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mj-col-10 {
+    cursor: pointer;
+    width: 10%;
+  }
+  .mj-col-10:hover {
+    color: red;
+  }
+  .mj-col-14 {
+    width: 14.28%;
+  }
+  .mj-calendar-weekdays .mj-col-14 {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .mj-calendar-days .mj-col-14 {
+    margin-bottom: 2px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+  .mj-calendar-days .mj-col-14 .date-cell {
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+  }
+  .mj-calendar-days .mj-col-14 .date-cell.active {
+    background-color: purple !important;
+    color: #fff !important;
+  }
+  .mj-calendar-days .mj-col-14 .date-cell.dis-date {
+    color: #000 !important;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  .mj-calendar-days .mj-col-14 .date-cell:hover {
+    background-color: #aaa;
+    color: yellow;
+  }
+  .mj-calendar-weekdays {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .mj-col-80 {
+    width: 80%;
+  }
+  .mj-col-60 {
+      width: 60%;
+  }
+}
+
+.mj-calendar {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  display: none;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 40px;
+  width: 100%;
+  z-index: 999;
+  &.active {
+      display: block;
+  }
+  .today-btn {
+      background-color: purple;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      padding: 0 10px;
+      color: #fff;
+  }
+}

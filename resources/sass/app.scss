@@ -1,0 +1,72 @@
+// Mixins
+@import 'components/mixins';
+
+// Variables
+@import 'components/variables';
+
+// NProgress
+@import "components/nprogress";
+
+// Toast
+@import "~react-toastify/scss/main";
+
+// Fontawesome
+@import '~font-awesome/scss/font-awesome';
+
+// Datatables
+@import '~mdbreact/dist/scss/mdb';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Rangeslider
+@import '~rc-slider/assets/index.css';
+
+// RC Checkbox
+@import '~rc-checkbox/assets/index.css';
+
+// Calendar
+@import 'components/calendar';
+
+// Animations
+@import 'components/animations';
+
+// Fonts
+@import 'components/persian-fonts';
+@import 'components/insurance-fonts';
+
+// Reset Browser
+@import 'components/reset';
+
+// Top Navigation
+@import 'components/top-navigation';
+
+// Landing
+@import 'components/landing';
+
+// Dashboard
+@import 'components/dashboard';
+
+// Login Page
+@import 'components/login';
+
+// Admin & Marketer panel sidebar
+@import 'components/admin-marketer-sidebar';
+
+// Admin & Marketer panel main content
+@import 'components/admin-marketer-main-content';
+
+// Footer
+@import 'components/footer';
+
+// Insurance Compare
+@import 'components/insurance-compare';
+
+// Reminder
+@import 'components/reminder';
+
+// Responsive
+@import 'components/responsive';
+
+// Override
+@import 'components/override';

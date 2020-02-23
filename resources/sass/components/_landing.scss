@@ -1,0 +1,127 @@
+.header {
+    height: 100vh;
+    overflow: visible;
+    position: relative;
+    &:after {
+        background-color: rgba(0,0,0,0.5);
+        content: '';
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 900;
+    }
+}
+
+.mj-carousel {
+  #main-carousel {
+    .carousel-inner {
+      .mj-carousel-item-01 {
+          background: url('../images/header_slider_01.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 100vh;
+      }
+      .mj-carousel-item-02 {
+          background: url('../images/header_slider_02.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 100vh;
+      }
+      .carousel-item {
+        img {
+          max-width: 150%;
+          @include animation(mjOpac 1s);
+        }
+        .slide-text {
+          color: #fff;
+          position: absolute;
+          left: 120px;
+          top: 45%;
+          width: 320px;
+          z-index: 50;
+          @include mjTransform(translateY(-50%));
+          h1, a {
+            opacity: 0;
+          }
+          h1 {
+            @include animation(mjOffsetBottom 1s 1s);
+            animation-fill-mode: both;
+            -webkit-animation-fill-mode: both;
+            font-size: 50px;
+            letter-spacing: -2px;
+            line-height: 60px;
+            margin-bottom: 40px;
+          }
+          a {
+            @include animation(mjOffsetBottom 1s 2s);
+            animation-fill-mode: both;
+            -webkit-animation-fill-mode: both;
+            border: 2px solid $mainColor;
+            padding: 10px 30px;
+            &:hover {
+              background-color: transparent;
+              color: #fff;
+              border-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.insurance-selection-box {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    color: #fff;
+    position: absolute;
+    right: 50%;
+    top: 55%;
+    width: 700px;
+    z-index: 950;
+    @include mjTransform(translate(50%,-50%));
+    @include transition(all 0.4s);
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal !important;
+    }
+}
+
+.insurance-selection-form {
+    input, select {
+        font-size: 14px;
+    }
+}
+
+.insurance-selection-button {
+    background-color: $mainColor;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 auto;
+    padding-top: 15px;
+    @include circle(125px);
+    @include transition(all 0.4s);
+    &:hover {
+        @include mjTransform(scale(1.1));
+    }
+    .icon-insurance {
+        font-size: 62px;
+    }
+}
+
+.about-section {
+    background: url('../images/about_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    p {
+        line-height: 32px;
+        text-align: justify;
+    }
+}
+
+.feature-boxes {
+    background-image: linear-gradient(to bottom, whitesmoke, white);
+}

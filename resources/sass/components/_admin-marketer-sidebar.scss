@@ -1,0 +1,90 @@
+.admin-marketer-sidebar {
+    .admin-marketer-header {
+        background-color: #060b17;
+        color: #fff;
+        padding: 10px 295px 10px 15px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .sidebar-wrapper {
+        background: url('../images/panel_sidebar_bg.jpg');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: -1px 0 30px rgba(0, 0, 0, 0.1);
+        height: 100vh;
+        overflow-y: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 280px;
+        z-index: 3;
+        @include transition(all 0.4s);
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #ccc;
+            border-radius: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $mainColor;
+            border-radius: 2px;
+        }
+        .navigation {
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            list-style: none;
+            .nav-item {
+                line-height: 2.5rem;
+                position: relative;
+                a {
+                    color: #2b345f;
+                    display: block;
+                    padding: 0 15px;
+                    position: relative;
+                    @include transition(all 0.4s);
+                    &:hover, &.active {
+                        color: #fa626b;
+                    }
+                    &.has-submenu {
+                        &:after {
+                            content: '\f107';
+                            font-family: FontAwesome;
+                            position: absolute;
+                            left: 15px;
+                            top: 50%;
+                            @include mjTransform(translateY(-50%) rotate(0deg));
+                            @include transition(all 0.4s);
+                        }
+                    }
+                    &.change-icon {
+                        &:after {
+                            @include mjTransform(translateY(-50%) rotate(180deg));
+                        }
+                    }
+                }
+                .menu-content {
+                    display: none;
+                    list-style-type: none;
+                    padding-right: 40px;
+                    .menu-item {
+                        &:hover {
+                            padding-right: 20px;
+                        }
+                    }
+                }
+                .badge {
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    @include mjTransform(translateY(-50%));
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.reminder-container {
+  background: url('../../images/reminder_container_bg.jpg');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100% !important;
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.reminder-form {
+    background: url('../../images/reminder_bg.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 20px 0 20px 20px;
+    margin: 0 auto;
+    opacity: 0.92;
+    width: 580px;
+    .form-control {
+      height: 40px;
+    }
+    .insurance-selection-select-label, .css-yk16xz-control, input[type="text"] {
+        background-color: #ffda4b;
+        border-color: $mainColor;
+        color: $mainColor;
+    }
+    .css-1uccc91-singleValue, h4, .btn-ins-option {
+        color: $mainColor;
+    }
+    .btn-ins-option {
+      &.active {
+        color: #fff !important;
+      }
+    }
+    .css-tj5bde-Svg {
+        fill: $mainColor;
+    }
+}
+
+@media screen and (max-width: 992px) {
+  .reminder-container {
+    padding-top: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .reminder-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .reminder-form {
+    h4 {
+      font-size: 14px !important;
+    }
+  }
+}

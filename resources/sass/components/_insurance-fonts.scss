@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'insurance';
+  src:  url('../fonts/insurance.eot?g0v8th');
+  src:  url('../fonts/insurance.eot?g0v8th#iefix') format('embedded-opentype'),
+    url('../fonts/insurance.ttf?g0v8th') format('truetype'),
+    url('../fonts/insurance.woff?g0v8th') format('woff'),
+    url('../fonts/insurance.svg?g0v8th#insurance') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'insurance' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-body:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-damage:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-earthquake:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-fire:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-life:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-medic:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-treatment:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-thirdparty:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-travel:before {
+  content: "\e908";
+  color: #fff;
+}

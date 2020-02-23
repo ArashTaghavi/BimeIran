@@ -1,0 +1,81 @@
+.admin-marketer-panel-content {
+    background-color: #191d2a;
+    min-height: 100vh;
+    padding: 87px 295px 15px 15px;
+    @include transition(all 0.4s);
+    .latest-news {
+		background-image: linear-gradient(to right, yellow, pink);
+		border-radius: 5px;
+		color: black;
+        height: 32px;
+		padding: 5px 10px;
+		position: relative;
+        & > strong {
+            background-color: blue;
+    		border-radius: 0 5px 5px 0;
+    		color: #fff;
+    		height: 100%;
+    		padding: 5px 10px;
+    		position: absolute;
+    		right: 0;
+    		text-align: center;
+    		top: 0;
+    		width: 100px;
+        }
+	}
+	.marquee {
+	    white-space: nowrap;
+	    overflow: hidden;
+        &.marquee-text {
+            font-weight: 400;
+    	    white-space:nowrap;
+    	    display:inline;
+    	    width:auto;
+        }
+	}
+}
+
+.admin-marketer-panel-form {
+    .form-control {
+        font-size: 14px;
+        padding: 10px;
+        @include transition(all 0.4s);
+        &:focus {
+            border: 1px solid $mainColor;
+            box-shadow: none;
+        }
+    }
+}
+
+.card-scale {
+    background-image: linear-gradient(to right, yellow, pink);
+    position: relative;
+    @include transition(all 0.4s);
+    &:hover {
+        @include mjTransform(scale(1.02));
+    }
+    .stat-number {
+        font-size: 70px;
+        line-height: 70px;
+    }
+    .btn-primary {
+        background-color: purple !important;
+        border-color: purple !important;
+        border-radius: 30px !important;
+        bottom: 18px;
+        position: absolute;
+        right: 18px;
+    }
+}
+
+.news-table, .customers-table {
+    table {
+        tr {
+            td, th {
+                &:first-child {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

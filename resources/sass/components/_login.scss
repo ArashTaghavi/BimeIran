@@ -1,0 +1,17 @@
+.login-page {
+    background: url('../images/admin_login_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 5;
+    .card {
+        background-color: rgba(255,255,255,0.8);
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        width: 400px;
+        @include mjTransform(translate(50%,-50%));
+    }
+}

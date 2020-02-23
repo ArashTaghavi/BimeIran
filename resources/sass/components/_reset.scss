@@ -1,0 +1,203 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: whitesmoke;
+  direction: rtl;
+  font-family: IRANSansWeb, Tahoma;
+  font-size: 15px;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  text-align: right;
+}
+
+h1  {font-size: 34px; line-height: 68px;}
+h2  {font-size: 30px; line-height: 60px;}
+h3  {font-size: 26px; line-height: 52px;}
+h4  {font-size: 22px; line-height: 44px;}
+h5  {font-size: 18px; line-height: 36px;}
+h6  {font-size: 14px; line-height: 28px;}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none !important;
+  @include transition(0.4s);
+  &.with-underline {
+    text-decoration: underline !important;
+  }
+}
+
+a, i, span {display: inline-block;}
+
+button {
+  outline: none !important;
+  @include transition(0.4s);
+}
+
+.mb-10 {margin-bottom: 10px !important;}
+.mb-15 {margin-bottom: 15px !important;}
+.mb-20 {margin-bottom: 20px !important;}
+.mb-25 {margin-bottom: 25px !important;}
+.mb-30 {margin-bottom: 30px !important;}
+.mb-35 {margin-bottom: 35px !important;}
+.mb-40 {margin-bottom: 40px !important;}
+.mb-45 {margin-bottom: 45px !important;}
+.mb-50 {margin-bottom: 50px !important;}
+
+.pt-90 {padding-top: 90px !important;}
+
+.font-size-11 {
+    font-size: 11px !important;
+}
+
+.font-size-12 {
+    font-size: 12px !important;
+}
+
+.font-size-13 {
+    font-size: 13px !important;
+}
+
+.font-size-14 {
+    font-size: 14px !important;
+}
+
+.text-gray {
+    color: #888 !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.btn-ins-option {
+    background-color: transparent;
+    border: 2px solid $mainColor;
+    border-radius: 50px;
+    font-size: 12px;
+    padding: 5px 10px;
+    @include transition(all 0.4s);
+    &.active {
+        background-color: $mainColor;
+        color: #fff;
+    }
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.align-row > div {align-self: center;}
+
+#main-modal {
+  background-color: rgba(0,0,0,0.75);
+  display: none;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.form-control-with-label {
+    position: relative;
+    .form-control-label {
+        background-color: $mainColor;
+        border-radius: 0.25rem 0 0 0.25rem;
+        color: #fff;
+        height: 35px;
+        padding: 5px 15px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.reminder-detail-box {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+.insurance-selection-input-with-label, .insurance-selection-select-with-label {
+    position: relative;
+    .insurance-selection-input-label {
+        color: #888;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        @include mjTransform(translateY(-50%));
+    }
+    .insurance-selection-select-label {
+        background-color: #fff;
+        color: #888;
+        font-size: 11px;
+        padding: 0 5px;
+        position: absolute;
+        right: 5px;
+        top: -8px;
+    }
+    .passenger-qty-selection-box-wrapper {
+        bottom: 100%;
+        opacity: 0;
+        padding-bottom: 5px;
+        position: absolute;
+        right: 0;
+        visibility: hidden;
+        width: 100%;
+        @include transition(all 0.4s);
+        .passenger-qty-selection-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        &.passenger-qty-selection-box-wrapper-from-bottom {
+            bottom: initial;
+            padding-bottom: 0;
+            padding-top: 5px;
+            top: 100%;
+            z-index: 100;
+            .passenger-qty-selection-box {
+                box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            }
+        }
+    }
+    .apply-change-btn {
+        background-color: $mainColor;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+        font-size: 12px;
+        padding-top: 7px;
+        position: absolute;
+        left: -10px;
+        text-align: center;
+        top: -20px;
+        @include circle(33px);
+        @include animation(mjOpac 0.4s);
+        &.active {
+            display: block;
+        }
+    }
+    &:hover {
+        .passenger-qty-selection-box-wrapper {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

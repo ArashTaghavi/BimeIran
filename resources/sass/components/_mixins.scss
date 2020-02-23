@@ -1,0 +1,45 @@
+@mixin animation($property) {
+  animation: $property;
+  -webkit-animation: $property;
+  -moz-animation: $property;
+  -o-animation: $property;
+}
+
+@mixin animation-fill-mode($property) {
+  animation-fill-mode: $property;
+  -webkit-animation-fill-mode: $property;
+}
+
+@mixin mjTransform($property) {
+  transform: $property;
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -o-transform: $property;
+  -ms-transform: $property;
+}
+
+@mixin filter($property) {
+  filter: $property;
+  -webkit-filter: $property;
+}
+
+@mixin transition($property) {
+  transition: $property;
+  -webkit-transition: $property;
+}
+
+@mixin circle($r) {
+  border-radius: $r;
+  height: $r;
+  width: $r;
+}
+
+@mixin fullOverlay($background) {
+  background: $background;
+  content: '';
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}

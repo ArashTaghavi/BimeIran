@@ -1,0 +1,73 @@
+.ins-purchase-steps {
+    margin: 0 auto;
+    width: 700px;
+    .col-3 {
+        opacity: 0.5;
+        &.active-step {
+            opacity: 1;
+        }
+        .mj-circle-label {
+            background-color: gray;
+            color: #fff;
+            font-size: 12px;
+            @include circle(20px);
+            &.active {
+                background-color: $mainColor;
+            }
+        }
+        h6 {
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+}
+
+.ins-purchase-step-wrapper {
+    position: relative;
+    .ins-purchase-step-overlay {
+        background-color: rgba(255,255,255,0.7);
+        height: 100%;
+        padding-top: 50px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        z-index: 30;
+        .fa-spinner {
+            color: purple;
+            font-size: 72px;
+        }
+    }
+}
+
+#thirdparty-additional-option-toggler {
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    padding: 0 10px 3px;
+    position: absolute;
+    left: 20px;
+    bottom: -10px;
+    .more-text {
+        display: inline-block;
+    }
+    .less-text {
+        display: none;
+    }
+    &.active {
+        .less-text {
+            display: inline-block;
+        }
+        .more-text {
+            display: none;
+        }
+    }
+}
+
+.thirdparty-additional-options {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}

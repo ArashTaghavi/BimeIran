@@ -1,0 +1,279 @@
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 95% !important;
+        &.reminder-container {
+          max-width: 100% !important;
+        }
+    }
+    .navbar-wrapper {
+        .mj-nav {
+            .navbar-brand {
+                margin-left: 0;
+            }
+            #collapsibleNavbar {
+              background-color: whitesmoke !important;
+              position: fixed !important;
+              top: 0 !important;
+              right: -250px;
+              bottom: 0 !important;
+              background-color: #ffffff;
+              width: 250px;
+              display: block;
+              overflow: hidden;
+              height: 100%;
+              z-index: 1002;
+              @include transition(all 0.4s);
+              &.active {
+                right: 0;
+              }
+              ul {
+                background-color: whitesmoke !important;
+                li {
+                  margin-left: 0 !important;
+                  padding: 0 !important;
+                  a {
+                    background-color: whitesmoke;
+                    border-bottom: 1px solid $mainColor;
+                    border-radius: 0;
+                    color: $mainColor;
+                    display: block;
+                    font-size: 13px;
+                    padding: 10px 15px;
+                    width: 100%;
+                    &:hover {
+                      background-color: $mainColor;
+                      color: whitesmoke;
+                    }
+                    &.dropdown-toggle {
+                      &::after {
+                        left: 10px;
+                        top: 10px;
+                      }
+                    }
+                  }
+                  .dropdown-menu {
+                      background-color: $mainColor;
+                      border-radius: 0;
+                      position: static !important;
+                      width: 100% !important;
+                      a {
+                          background-color: $mainColor;
+                      }
+                  }
+                  &.mobile-brand {
+                    border-bottom: 1px solid $mainColor;
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    a {
+                      padding: 20px 0;
+                      &:hover {
+                          background-color: whitesmoke !important;
+                      }
+                    }
+                    img {
+                      display: block;
+                      margin: 0 auto;
+                      width: 150px;
+                    }
+                  }
+                }
+              }
+            }
+        }
+    }
+    .footer {
+        .footer-a {
+            padding: 50px 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .login-modal {
+        .login-box {
+            width: 97%;
+        }
+    }
+    .dashboard-info-box {
+        width: 100%;
+    }
+    .rc-slider-vertical {
+        margin-left: 2vw !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100% !important;
+    }
+    .admin-marketer-sidebar {
+        .admin-marketer-header {
+            padding: 5px 15px;
+            h3 {
+                font-size: 20px;
+                line-height: 40px;
+            }
+        }
+        .sidebar-wrapper {
+            right: -280px;
+            &.active {
+                right: 0;
+            }
+        }
+    }
+    .admin-marketer-panel-content {
+        padding: 67px 15px 15px;
+    }
+    .card-scale {
+        .btn-primary {
+            bottom: 1rem;
+            right: 1rem;
+        }
+    }
+    .insurance-selection-box {
+        width: 95%;
+    }
+    .ins-purchase-steps {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .login-modal {
+        .login-box {
+            width: 90%;
+            img {
+                display: none;
+            }
+            .login-form {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .btn {
+        font-size: 12px !important;
+        padding: 5px;
+        & > .fa {
+            font-size: 16px !important;
+            top: 2px !important;
+        }
+    }
+    .navbar-wrapper {
+        .mj-nav {
+            .navbar-brand {
+                img {
+                    max-width: 140px;
+                }
+            }
+        }
+    }
+    .dashboard-dropdown {
+        & > a {
+            font-size: 13px;
+            &::after {
+                right: -12px;
+            }
+        }
+    }
+    .login-modal {
+        .login-box {
+            .login-form {
+                padding: 15px 25px;
+            }
+        }
+    }
+    .dashboard-tab {
+        font-size: 10px;
+        i {
+            font-size: 27px;
+        }
+    }
+    .footer {
+        .footer-b {
+            font-size: 12px;
+        }
+    }
+    .responsive-table {
+        table {
+            width: 450px !important;
+        }
+    }
+    .customers-table {
+        table {
+            width: 576px !important;
+        }
+    }
+    .w-50 {
+        width: 100% !important;
+    }
+    .login-page {
+        .card {
+            width: 90%;
+        }
+    }
+    .insurance-selection-button {
+        @include circle(100px);
+        h6 {
+            font-size: 12px;
+            line-height: 14px;
+        }
+        .icon-insurance {
+            font-size: 50px;
+        }
+    }
+    .passenger-qty-selection-box-wrapper {
+        .passenger-qty-selection-box {
+            padding: 10px !important;
+            & > div.row {
+                & > div {
+                    &:first-child {
+                        font-size: 13px;
+                        padding-left: 0 !important;
+                    }
+                    input {
+                        width: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+    .additional-options {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+    }
+    .customer-discount-box {
+        border-top: 1px solid #444 !important;
+        border-radius: 0 !important;
+        margin-bottom: 0 !important;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 20;
+    }
+    .d-overflow-hidden {
+        overflow: hidden;
+    }
+    .table {
+        th, td {
+            font-size: 12px !important;
+        }
+    }
+    .dashboard-info-box-450 {
+        width: 100%;
+    }
+    .range-slider-wrapper {
+        height: 650px !important;
+    }
+    .most-bottom-label {
+        font-size: 10px !important;
+        position: relative;
+        top: 20px;
+        right: 30px;
+    }
+}
